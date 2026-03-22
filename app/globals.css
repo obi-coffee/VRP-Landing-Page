@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #FBF9F3;
+  color: #2D2D2D;
+}
+
+/* Skip to content link */
+.skip-to-content {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  padding: 0.5rem 1rem;
+  background: #F05881;
+  color: white;
+  font-family: var(--font-body);
+}
+
+.skip-to-content:focus {
+  left: 0;
+}
+
+/* Scroll-triggered animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-on-scroll {
+  opacity: 0;
+}
+
+.animate-on-scroll.is-visible {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Stagger children */
+.animate-on-scroll.is-visible .stagger-1 { animation-delay: 0.1s; }
+.animate-on-scroll.is-visible .stagger-2 { animation-delay: 0.2s; }
+.animate-on-scroll.is-visible .stagger-3 { animation-delay: 0.3s; }
+.animate-on-scroll.is-visible .stagger-4 { animation-delay: 0.4s; }
+
+/* Focus ring */
+*:focus-visible {
+  outline: 2px solid #F05881;
+  outline-offset: 2px;
+}
+
+/* Form input styles */
+input::placeholder,
+textarea::placeholder,
+select::placeholder {
+  color: #9a9a9a;
+}
+
+/* Scroll indicator bounce */
+@keyframes gentleBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+}
+
+.scroll-indicator {
+  animation: gentleBounce 2s ease-in-out infinite;
+}
