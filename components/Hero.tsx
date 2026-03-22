@@ -11,14 +11,17 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
-      {/* Background video */}
+      {/* London Fog fallback — lowest layer */}
+      <div className="absolute inset-0 z-0 bg-london-fog" aria-hidden="true" />
+
+      {/* Background video — above fallback */}
       <video
         autoPlay
         muted
         loop
         playsInline
         onCanPlay={() => setVideoLoaded(true)}
-        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+        className={`absolute inset-0 z-[1] w-full h-full object-cover transition-opacity duration-1000 ${
           videoLoaded ? 'opacity-100' : 'opacity-0'
         }`}
         aria-hidden="true"
@@ -26,12 +29,9 @@ export default function Hero() {
         <source src={VIDEO_URL} type="video/mp4" />
       </video>
 
-      {/* London Fog fallback behind video */}
-      <div className="absolute inset-0 bg-london-fog" aria-hidden="true" />
-
-      {/* Dark overlay for text legibility */}
+      {/* Dark overlay — above video, below content */}
       <div
-        className="absolute inset-0 bg-rich-black/40"
+        className="absolute inset-0 z-[2] bg-rich-black/40"
         aria-hidden="true"
       />
 
