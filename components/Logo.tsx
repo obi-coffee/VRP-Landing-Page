@@ -1,12 +1,15 @@
-export default function Logo({ className = '' }: { className?: string }) {
+import Image from 'next/image'
+
+export default function Logo({ className = '', variant = 'pink' }: { className?: string; variant?: 'pink' | 'ivory' }) {
+  const src = variant === 'ivory' ? '/Logor_Flat_Ivory.svg' : '/Logo_Flat_Pink.svg'
   return (
-    <span className={`inline-flex items-baseline gap-0.5 ${className}`}>
-      <span className="font-mono font-bold text-tast-pink text-xl tracking-tight">
-        tāst
-      </span>
-      <span className="font-handwritten text-tast-light-pink text-2xl leading-none">
-        Coffee
-      </span>
-    </span>
+    <Image
+      src={src}
+      alt="tāst Coffee"
+      width={437}
+      height={90}
+      className={`h-8 w-auto ${className}`}
+      priority
+    />
   )
 }
