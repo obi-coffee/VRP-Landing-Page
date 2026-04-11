@@ -39,13 +39,13 @@ export default function Hero() {
       <div className="relative z-10 px-6 pt-24 pb-16 flex flex-col items-center flex-1 w-full">
         <ScrollReveal className="text-center max-w-4xl mx-auto my-auto">
           <h1 className="mb-8">
-            <span className="block font-mono font-bold uppercase text-white text-[clamp(2.5rem,8vw,6rem)] leading-[0.95] tracking-tight">
+            <span className="block font-sans font-bold uppercase text-white text-[clamp(2.5rem,8vw,6rem)] leading-[0.95] tracking-tight">
               Your Coffee
             </span>
-            <span className="block font-serif italic text-white/80 text-[clamp(1.5rem,4vw,3rem)] leading-tight mt-2">
+            <span className="block font-editorial italic text-white/80 text-[clamp(1.5rem,4vw,3rem)] leading-tight mt-2">
               deserves to be
             </span>
-            <span className="block font-mono font-bold uppercase text-white text-[clamp(2.5rem,8vw,6rem)] leading-[0.95] tracking-tight">
+            <span className="block font-sans font-bold uppercase text-white text-[clamp(2.5rem,8vw,6rem)] leading-[0.95] tracking-tight">
               Found.
             </span>
           </h1>
@@ -63,7 +63,7 @@ export default function Hero() {
           <div className="mt-12">
             <a
               href="#apply"
-              className="inline-block font-serif italic text-lg text-white border-b border-white/40 pb-1 hover:border-tast-pink hover:text-tast-pink transition-colors duration-200"
+              className="inline-block font-editorial italic text-lg text-white border-b border-white/40 pb-1 hover:border-tast-pink hover:text-tast-pink transition-colors duration-200"
             >
               Become a Founding Partner
             </a>

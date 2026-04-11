@@ -28,7 +28,7 @@ export default function Nav() {
         </a>
         <a
           href="#apply"
-          className="font-mono text-sm uppercase tracking-wider text-rich-black border border-rich-black/20 px-5 py-2 hover:border-tast-pink hover:text-tast-pink transition-colors duration-200"
+          className="font-mono text-xs uppercase tracking-wider text-rich-black border border-rich-black/20 px-5 py-2 hover:border-tast-pink hover:text-tast-pink transition-colors duration-200"
         >
           Apply
         </a>

@@ -19,28 +19,6 @@ const spaceMono = localFont({
   display: 'swap',
 })
 
-const dmSans = localFont({
-  src: [
-    {
-      path: '../public/fonts/dm-sans-latin-400-normal.woff2',
-      weight: '400',
-      style: 'normal',
-    },
-    {
-      path: '../public/fonts/dm-sans-latin-500-normal.woff2',
-      weight: '500',
-      style: 'normal',
-    },
-    {
-      path: '../public/fonts/dm-sans-latin-700-normal.woff2',
-      weight: '700',
-      style: 'normal',
-    },
-  ],
-  variable: '--font-body',
-  display: 'swap',
-})
-
 const caveat = localFont({
   src: [
     {
@@ -79,9 +57,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${spaceMono.variable} ${dmSans.variable} ${caveat.variable}`}
+      className={`${spaceMono.variable} ${caveat.variable}`}
     >
-      <body className="bg-london-fog text-rich-black font-body antialiased">
+      <body className="bg-london-fog text-rich-black font-sans antialiased">
         <a href="#main-content" className="skip-to-content">
           Skip to content
         </a>

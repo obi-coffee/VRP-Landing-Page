@@ -8,18 +8,19 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'london-fog': '#FBF9F3',
-        'rich-black': '#2D2D2D',
+        'london-fog': '#FAF9F6',
+        'rich-black': '#1A1A1A',
         'tast-pink': '#F05881',
         'tast-red': '#EF4056',
         'tast-light-pink': '#F287B7',
-        'tast-mauve': '#A12F52',
+        'raspberry-barete': '#A23053',
       },
       fontFamily: {
-        mono: ['var(--font-mono)', 'monospace'],
+        sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
         serif: ['Times New Roman', 'Times', 'serif'],
-        body: ['var(--font-body)', 'sans-serif'],
+        mono: ['var(--font-mono)', 'monospace'],
         handwritten: ['var(--font-handwritten)', 'cursive'],
+        editorial: ['Georgia', 'Times New Roman', 'serif'],
       },
     },
   },
