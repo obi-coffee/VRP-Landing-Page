@@ -52,7 +52,7 @@ export default function DeeperValue() {
       <div className="max-w-5xl mx-auto">
         {/* Intro */}
         <ScrollReveal>
-          <h2 className="font-serif text-[clamp(1.5rem,4vw,2.75rem)] text-center leading-snug max-w-3xl mx-auto mb-24">
+          <h2 className="font-editorial text-[clamp(1.5rem,4vw,2.75rem)] text-center leading-snug max-w-3xl mx-auto mb-24">
             We&apos;re building the definitive platform for specialty coffee
             discovery. And we want you to help shape it.
           </h2>
@@ -63,10 +63,10 @@ export default function DeeperValue() {
           <div className="grid md:grid-cols-2 gap-12 md:gap-16 mb-32">
             {benefits.map((b) => (
               <div key={b.title}>
-                <h3 className="font-mono font-bold uppercase text-tast-pink text-sm tracking-widest mb-3">
+                <h3 className="font-mono font-bold uppercase text-tast-pink text-xs tracking-widest mb-3">
                   {b.title}
                 </h3>
-                <p className="font-body text-rich-black/80 leading-relaxed">
+                <p className="font-serif text-rich-black/80 leading-relaxed">
                   {b.description}
                 </p>
               </div>
@@ -103,11 +103,11 @@ export default function DeeperValue() {
                   />
 
                   <div className="pl-8 md:pl-0 md:w-1/2">
-                    <p className="font-mono text-sm font-bold text-tast-pink uppercase tracking-wider mb-1">
+                    <p className="font-mono text-xs font-bold text-tast-pink uppercase tracking-wider mb-1">
                       {item.date}
                     </p>
-                    <p className="font-serif text-xl mb-1">{item.label}</p>
-                    <p className="font-body text-sm text-rich-black/60">
+                    <p className="font-editorial text-xl mb-1">{item.label}</p>
+                    <p className="font-sans text-sm text-rich-black/60">
                       {item.detail}
                     </p>
                   </div>

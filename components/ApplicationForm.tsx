@@ -40,14 +40,14 @@ function InputField({
     <div className="relative">
       <label
         htmlFor={name}
-        className="block font-body text-sm text-rich-black/60 mb-1"
+        className="block font-sans text-sm text-rich-black/60 mb-1"
       >
         {label}
         {required && <span className="text-tast-pink ml-1" aria-hidden="true">*</span>}
       </label>
       <div className="relative">
         {prefix && (
-          <span className="absolute left-0 bottom-2 text-rich-black/40 font-body text-base">
+          <span className="absolute left-0 bottom-2 text-rich-black/40 font-sans text-base">
             {prefix}
           </span>
         )}
@@ -57,7 +57,7 @@ function InputField({
           type={type}
           required={required}
           placeholder={placeholder}
-          className={`w-full bg-transparent border-b border-rich-black/20 py-2 font-body text-base text-rich-black placeholder:text-rich-black/30 focus:border-tast-pink focus:outline-none transition-colors ${
+          className={`w-full bg-transparent border-b border-rich-black/20 py-2 font-sans text-base text-rich-black placeholder:text-rich-black/30 focus:border-tast-pink focus:outline-none transition-colors ${
             prefix ? 'pl-5' : ''
           }`}
           aria-required={required}
@@ -82,7 +82,7 @@ function SelectField({
     <div>
       <label
         htmlFor={name}
-        className="block font-body text-sm text-rich-black/60 mb-1"
+        className="block font-sans text-sm text-rich-black/60 mb-1"
       >
         {label}
         {required && <span className="text-tast-pink ml-1" aria-hidden="true">*</span>}
@@ -91,7 +91,7 @@ function SelectField({
         id={name}
         name={name}
         required={required}
-        className="w-full bg-transparent border-b border-rich-black/20 py-2 font-body text-base text-rich-black focus:border-tast-pink focus:outline-none transition-colors appearance-none cursor-pointer"
+        className="w-full bg-transparent border-b border-rich-black/20 py-2 font-sans text-base text-rich-black focus:border-tast-pink focus:outline-none transition-colors appearance-none cursor-pointer"
         defaultValue=""
         aria-required={required}
       >
@@ -137,16 +137,16 @@ export default function ApplicationForm() {
     return (
       <section id="apply" className="py-24 md:py-32 px-6">
         <div className="max-w-2xl mx-auto text-center">
-          <h2 className="font-serif text-[clamp(2rem,5vw,4rem)] leading-tight mb-6">
+          <h2 className="font-sans font-bold text-[clamp(2rem,5vw,4rem)] leading-tight mb-6">
             We got you.
           </h2>
-          <p className="font-body text-lg text-rich-black/70 mb-10">
+          <p className="font-serif text-lg text-rich-black/70 mb-10">
             Expect to hear from us within 48 hours. In the meantime, grab a cup
             of something good.
           </p>
           <a
             href="#"
-            className="inline-block font-mono text-sm uppercase tracking-wider text-tast-pink border-b border-tast-pink/30 pb-1 hover:border-tast-pink transition-colors"
+            className="inline-block font-mono text-xs uppercase tracking-wider text-tast-pink border-b border-tast-pink/30 pb-1 hover:border-tast-pink transition-colors"
           >
             Back to top
           </a>
@@ -159,7 +159,7 @@ export default function ApplicationForm() {
     <section id="apply" className="py-24 md:py-32 px-6">
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="font-serif text-[clamp(2rem,5vw,4rem)] leading-tight mb-4">
+          <h2 className="font-sans font-bold text-[clamp(2rem,5vw,4rem)] leading-tight mb-4">
             Let&apos;s Talk.
           </h2>
           <p className="font-handwritten text-2xl text-tast-pink">
@@ -246,7 +246,7 @@ export default function ApplicationForm() {
             <div className="mt-6">
               <label
                 htmlFor="notes"
-                className="block font-body text-sm text-rich-black/60 mb-1"
+                className="block font-sans text-sm text-rich-black/60 mb-1"
               >
                 Anything else you&apos;d like us to know?
               </label>
@@ -254,14 +254,14 @@ export default function ApplicationForm() {
                 id="notes"
                 name="notes"
                 rows={3}
-                className="w-full bg-transparent border-b border-rich-black/20 py-2 font-body text-base text-rich-black placeholder:text-rich-black/30 focus:border-tast-pink focus:outline-none transition-colors resize-none"
+                className="w-full bg-transparent border-b border-rich-black/20 py-2 font-sans text-base text-rich-black placeholder:text-rich-black/30 focus:border-tast-pink focus:outline-none transition-colors resize-none"
               />
             </div>
           </fieldset>
 
           {state === 'error' && (
             <div
-              className="mb-6 p-4 bg-tast-pink/10 border border-tast-pink/20 text-rich-black font-body text-sm"
+              className="mb-6 p-4 bg-tast-pink/10 border border-tast-pink/20 text-rich-black font-sans text-sm"
               role="alert"
             >
               Something went wrong on our end. Try again, or email us directly
@@ -278,7 +278,7 @@ export default function ApplicationForm() {
           <button
             type="submit"
             disabled={state === 'submitting'}
-            className="w-full md:w-auto bg-tast-pink text-white font-mono text-sm uppercase tracking-wider px-12 py-4 hover:bg-tast-red transition-colors duration-200 disabled:opacity-60 disabled:cursor-not-allowed"
+            className="w-full md:w-auto bg-tast-pink text-white font-mono text-xs uppercase tracking-wider px-12 py-4 hover:bg-tast-red transition-colors duration-200 disabled:opacity-60 disabled:cursor-not-allowed"
           >
             {state === 'submitting' ? 'Submitting...' : 'Submit Application'}
           </button>

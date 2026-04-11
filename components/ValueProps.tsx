@@ -24,7 +24,7 @@ export default function ValueProps() {
     <section className="py-24 md:py-32 px-6">
       <div className="max-w-5xl mx-auto">
         <ScrollReveal>
-          <h2 className="font-serif text-[clamp(1.5rem,4vw,2.75rem)] text-center leading-snug max-w-3xl mx-auto mb-20">
+          <h2 className="font-editorial text-[clamp(1.5rem,4vw,2.75rem)] text-center leading-snug max-w-3xl mx-auto mb-20">
             What&apos;s good for the marketplace is good for the market.
           </h2>
         </ScrollReveal>
@@ -33,10 +33,10 @@ export default function ValueProps() {
           {props.map((prop, i) => (
             <ScrollReveal key={prop.title}>
               <div className={`stagger-${i + 1}`}>
-                <h3 className="font-mono font-bold uppercase text-tast-pink text-sm tracking-widest mb-4">
+                <h3 className="font-mono font-bold uppercase text-tast-pink text-xs tracking-widest mb-4">
                   {prop.title}
                 </h3>
-                <p className="font-body text-rich-black/80 leading-relaxed text-base">
+                <p className="font-serif text-rich-black/80 leading-relaxed text-base">
                   {prop.body}
                 </p>
               </div>
