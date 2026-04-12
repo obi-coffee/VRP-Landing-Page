@@ -75,3 +75,19 @@ select::placeholder {
 .scroll-indicator {
   animation: gentleBounce 2s ease-in-out infinite;
 }
+
+/* Roaster ticker */
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.ticker-track {
+  display: flex;
+  width: max-content;
+  animation: ticker 30s linear infinite;
+}
+
+.ticker-track:hover {
+  animation-play-state: paused;
+}
