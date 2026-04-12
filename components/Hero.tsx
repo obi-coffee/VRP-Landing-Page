@@ -40,13 +40,16 @@ export default function Hero() {
         <ScrollReveal className="text-center max-w-4xl mx-auto my-auto">
           <h1 className="mb-8">
             <span className="block font-sans font-bold uppercase text-white text-[clamp(2.5rem,8vw,6rem)] leading-[0.95] tracking-tight">
-              Your Coffee
-            </span>
-            <span className="block font-editorial italic text-white/80 text-[clamp(1.5rem,4vw,3rem)] leading-tight mt-2">
-              deserves to be
+              The Platform
             </span>
             <span className="block font-sans font-bold uppercase text-white text-[clamp(2.5rem,8vw,6rem)] leading-[0.95] tracking-tight">
-              Found.
+              Specialty Coffee
+            </span>
+            <span className="block font-sans font-bold uppercase text-white text-[clamp(2.5rem,8vw,6rem)] leading-[0.95] tracking-tight">
+              Deserves.
+            </span>
+            <span className="block font-editorial italic text-white/80 text-[clamp(1.25rem,3vw,2rem)] leading-tight mt-4">
+              built by people who actually drink it.
             </span>
           </h1>
 
