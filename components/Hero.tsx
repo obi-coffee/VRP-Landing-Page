@@ -6,11 +6,38 @@ import ScrollReveal from './ScrollReveal'
 const VIDEO_URL =
   'https://tastcoffee.com/cdn/shop/videos/c/vp/1d2d041a7bb641768fb04243fb10cd2d/1d2d041a7bb641768fb04243fb10cd2d.HD-1080p-7.2Mbps-40602647.mp4?v=0'
 
+const ROASTERS = [
+  { name: 'Olympia Coffee Roasting', city: 'Olympia', state: 'WA' },
+  { name: 'Blueprint Coffee', city: 'St. Louis', state: 'MO' },
+  { name: 'Small Planes Coffee', city: 'Washington', state: 'DC' },
+  { name: 'Sepia Coffee Project', city: 'Detroit', state: 'MI' },
+  { name: 'Apiary Coffee Roasters', city: 'Washington', state: 'DC' },
+]
+
+function TickerContent() {
+  return (
+    <>
+      <span className="font-handwritten text-white text-lg md:text-xl whitespace-nowrap mx-4">
+        Who all gon&apos; be there?
+      </span>
+      <span className="text-tast-pink mx-2" aria-hidden="true">&bull;</span>
+      {ROASTERS.map((r) => (
+        <span key={r.name} className="whitespace-nowrap">
+          <span className="font-mono text-xs uppercase tracking-wider text-white">
+            {r.name}, {r.city}, {r.state}
+          </span>
+          <span className="text-tast-pink mx-4" aria-hidden="true">&bull;</span>
+        </span>
+      ))}
+    </>
+  )
+}
+
 export default function Hero() {
   const [videoLoaded, setVideoLoaded] = useState(false)
 
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex flex-col overflow-hidden">
       {/* London Fog fallback — lowest layer */}
       <div className="absolute inset-0 z-0 bg-london-fog" aria-hidden="true" />
 
@@ -86,6 +113,14 @@ export default function Hero() {
           >
             <path d="M12 5v14M5 12l7 7 7-7" />
           </svg>
+        </div>
+      </div>
+
+      {/* Roaster ticker */}
+      <div className="relative z-10 bg-rich-black/60 backdrop-blur-sm border-t border-white/10 py-3 overflow-hidden">
+        <div className="ticker-track" aria-label="Verified Roaster Partners">
+          <TickerContent />
+          <TickerContent />
         </div>
       </div>
     </section>
