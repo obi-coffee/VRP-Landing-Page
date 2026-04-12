@@ -2,8 +2,7 @@ import { Resend } from 'resend'
 
 export async function sendNotificationEmail(data: Record<string, string>) {
   const resend = new Resend(process.env.RESEND_API_KEY)
-  const to = process.env.NOTIFICATION_EMAIL
-  if (!to) throw new Error('NOTIFICATION_EMAIL not configured')
+  const to = process.env.NOTIFICATION_EMAIL || 'obi@tastcoffee.com'
 
   const fields = [
     ['Roastery Name', data.roasteryName],

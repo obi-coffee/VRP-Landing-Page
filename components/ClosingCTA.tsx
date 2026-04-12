@@ -6,10 +6,10 @@ export default function ClosingCTA() {
       <div className="max-w-3xl mx-auto text-center">
         <ScrollReveal>
           <h2 className="font-sans font-bold text-[clamp(1.75rem,4.5vw,3.5rem)] leading-snug mb-4">
-            Your beans. Their palates.
+            Great Coffee Gets Lost.
           </h2>
           <p className="font-editorial italic text-[clamp(1.75rem,4.5vw,3.5rem)] text-tast-pink leading-snug mb-12">
-            We&apos;ll make the introduction.
+            we built the fix.
           </p>
           <a
             href="#apply"
