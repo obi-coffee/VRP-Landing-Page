@@ -80,13 +80,11 @@ export default function Hero() {
             </span>
           </h1>
 
-          <div className="bg-tast-pink text-white max-w-xl mx-auto p-8 mt-10">
-            <p className="font-mono text-xs uppercase tracking-widest mb-3 opacity-80">
-              tāst &bull; platform
-            </p>
-            <p className="font-serif text-lg leading-relaxed italic">
-              A specialty coffee discovery app connecting roasters with the
-              people who&apos;ll love their beans most.
+          <div className="max-w-2xl mx-auto mt-10">
+            <p className="font-serif text-lg leading-relaxed text-white/80 italic">
+              The world doesn&apos;t need more coffee. It needs a better way to
+              discover, remember, and share the great coffee already out there.
+              Your coffee.
             </p>
           </div>
 
@@ -95,7 +93,7 @@ export default function Hero() {
               href="#apply"
               className="inline-block font-editorial italic text-lg text-white border-b border-white/40 pb-1 hover:border-tast-pink hover:text-tast-pink transition-colors duration-200"
             >
-              Become a Founding Partner
+              Become a Founding Roaster Partner
             </a>
           </div>
         </ScrollReveal>
