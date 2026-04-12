@@ -163,7 +163,7 @@ export default function ApplicationForm() {
             Let&apos;s Talk.
           </h2>
           <p className="font-handwritten text-2xl text-tast-pink">
-            Tell us about your roastery.
+            Tell us about your business.
           </p>
         </div>
 

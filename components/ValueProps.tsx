@@ -14,7 +14,7 @@ const props = [
     body: 'See how your coffees perform. Which flavor profiles resonate. What equipment your customers use. Insights you can\u2019t get anywhere else.',
   },
   {
-    title: '88\u201392% of Every Sale',
+    title: '80\u201390% of Every Sale',
     body: 'Stays with you. Compare that to 40\u201360% through traditional wholesale channels.',
   },
 ]
@@ -25,7 +25,8 @@ export default function ValueProps() {
       <div className="max-w-5xl mx-auto">
         <ScrollReveal>
           <h2 className="font-editorial text-[clamp(1.5rem,4vw,2.75rem)] text-center leading-snug max-w-3xl mx-auto mb-20">
-            What&apos;s good for the marketplace is good for the market.
+            A specialty coffee discovery platform connecting roasters with the
+            people who&apos;ll love their products most.
           </h2>
         </ScrollReveal>
 

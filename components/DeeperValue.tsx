@@ -54,7 +54,7 @@ export default function DeeperValue() {
         <ScrollReveal>
           <h2 className="font-editorial text-[clamp(1.5rem,4vw,2.75rem)] text-center leading-snug max-w-3xl mx-auto mb-24">
             We&apos;re building the definitive platform for specialty coffee
-            discovery. And we want you to help shape it.
+            discovery but it doesn&apos;t work without you.
           </h2>
         </ScrollReveal>
 
