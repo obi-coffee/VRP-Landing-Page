@@ -29,7 +29,7 @@ export default function Nav() {
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <a href="#" aria-label="tāst Coffee home">
-          <Logo />
+          <Logo variant="ivory" />
         </a>
         <a
           href="#apply"
