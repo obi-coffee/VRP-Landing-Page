@@ -1,10 +1,9 @@
-'use client'
-
-import { useState } from 'react'
 import ScrollReveal from './ScrollReveal'
+import { HERO_VIDEO_URL } from '@/lib/constants'
 
-const VIDEO_URL =
-  'https://tastcoffee.com/cdn/shop/videos/c/vp/1d2d041a7bb641768fb04243fb10cd2d/1d2d041a7bb641768fb04243fb10cd2d.HD-1080p-7.2Mbps-40602647.mp4?v=0'
+// 16:9 dark rich-black placeholder shown until the video paints its first frame
+const POSTER =
+  "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9'%3E%3Crect width='100%25' height='100%25' fill='%231A1A1A'/%3E%3C/svg%3E"
 
 const ROASTERS = [
   { name: 'Olympia Coffee Roasting', city: 'Olympia', state: 'WA' },
@@ -36,12 +35,10 @@ function TickerContent() {
 }
 
 export default function Hero() {
-  const [videoLoaded, setVideoLoaded] = useState(false)
-
   return (
     <section className="relative min-h-screen flex flex-col overflow-hidden">
-      {/* London Fog fallback — lowest layer */}
-      <div className="absolute inset-0 z-0 bg-london-fog" aria-hidden="true" />
+      {/* Rich-black fallback — lowest layer, matches the poster */}
+      <div className="absolute inset-0 z-0 bg-rich-black" aria-hidden="true" />
 
       {/* Background video — above fallback */}
       <video
@@ -49,13 +46,12 @@ export default function Hero() {
         muted
         loop
         playsInline
-        onCanPlay={() => setVideoLoaded(true)}
-        className={`absolute inset-0 z-[1] w-full h-full object-cover transition-opacity duration-1000 ${
-          videoLoaded ? 'opacity-100' : 'opacity-0'
-        }`}
+        preload="auto"
+        poster={POSTER}
+        className="absolute inset-0 z-[1] w-full h-full object-cover"
         aria-hidden="true"
       >
-        <source src={VIDEO_URL} type="video/mp4" />
+        <source src={HERO_VIDEO_URL} type="video/mp4" />
       </video>
 
       {/* Dark overlay — above video, below content */}
