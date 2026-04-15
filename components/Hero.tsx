@@ -12,6 +12,8 @@ const ROASTERS = [
   { name: 'Small Planes Coffee', city: 'Washington', state: 'DC' },
   { name: 'Sepia Coffee Project', city: 'Detroit', state: 'MI' },
   { name: 'Apiary Coffee Roasters', city: 'Washington', state: 'DC' },
+  { name: 'Portrait Coffee', city: 'Atlanta', state: 'GA' },
+  { name: 'Goodboybob', city: 'California', state: '' },
 ]
 
 function TickerContent() {
@@ -24,7 +26,7 @@ function TickerContent() {
       {ROASTERS.map((r) => (
         <span key={r.name} className="whitespace-nowrap">
           <span className="font-mono text-xs uppercase tracking-wider text-white">
-            {r.name}, {r.city}, {r.state}
+            {r.name}, {r.city}{r.state ? `, ${r.state}` : ''}
           </span>
           <span className="text-tast-pink mx-4" aria-hidden="true">&bull;</span>
         </span>

@@ -33,7 +33,7 @@ export default function Nav() {
         </a>
         <a
           href="#apply"
-          className="font-mono text-xs uppercase tracking-wider text-white border border-white/30 px-5 py-2 hover:border-tast-pink hover:text-tast-pink transition-colors duration-200"
+          className="font-mono text-xs uppercase tracking-wider text-white border border-white/30 px-5 py-2 rounded-full hover:border-tast-pink hover:text-tast-pink transition-colors duration-200"
         >
           Apply
         </a>

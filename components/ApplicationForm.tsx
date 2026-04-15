@@ -156,14 +156,14 @@ export default function ApplicationForm() {
   }
 
   return (
-    <section id="apply" className="py-24 md:py-32 px-6">
+    <section id="apply" className="pt-12 pb-24 md:pt-16 md:pb-32 px-6">
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="font-sans font-bold text-[clamp(2rem,5vw,4rem)] leading-tight mb-4">
             Let&apos;s Talk.
           </h2>
           <p className="font-handwritten text-2xl text-tast-pink">
-            Tell us about your business.
+            Tell us about yourself.
           </p>
         </div>
 
@@ -210,11 +210,13 @@ export default function ApplicationForm() {
                 label="Website URL"
                 name="website"
                 type="url"
+                required
                 placeholder="https://"
               />
               <InputField
                 label="Instagram Handle"
                 name="instagram"
+                required
                 prefix="@"
               />
               <InputField
@@ -275,13 +277,15 @@ export default function ApplicationForm() {
             </div>
           )}
 
-          <button
-            type="submit"
-            disabled={state === 'submitting'}
-            className="w-full md:w-auto bg-tast-pink text-white font-mono text-xs uppercase tracking-wider px-12 py-4 hover:bg-tast-red transition-colors duration-200 disabled:opacity-60 disabled:cursor-not-allowed"
-          >
-            {state === 'submitting' ? 'Submitting...' : 'Submit Application'}
-          </button>
+          <div className="flex justify-center">
+            <button
+              type="submit"
+              disabled={state === 'submitting'}
+              className="bg-tast-pink text-white font-mono text-xs uppercase tracking-wider px-12 py-4 rounded-full hover:bg-tast-red transition-colors duration-200 disabled:opacity-60 disabled:cursor-not-allowed"
+            >
+              {state === 'submitting' ? 'Submitting...' : 'Submit Application'}
+            </button>
+          </div>
         </form>
       </div>
     </section>
