@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
+import { HERO_VIDEO_URL } from '@/lib/constants'
 import './globals.css'
 
 const spaceMono = localFont({
@@ -59,6 +60,14 @@ export default function RootLayout({
       lang="en"
       className={`${spaceMono.variable} ${caveat.variable}`}
     >
+      <head>
+        <link
+          rel="preload"
+          as="video"
+          href={HERO_VIDEO_URL}
+          type="video/mp4"
+        />
+      </head>
       <body className="bg-london-fog text-rich-black font-sans antialiased">
         <a href="#main-content" className="skip-to-content">
           Skip to content
