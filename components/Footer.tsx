@@ -37,7 +37,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://instagram.com/tastcoffee"
+                  href="https://www.instagram.com/tastcoffeeco/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-rich-black/70 hover:text-tast-pink transition-colors"
@@ -67,7 +67,7 @@ export default function Footer() {
 
       {/* Bottom */}
       <div className="border-t border-rich-black/10 py-8 text-center">
-        <div className="opacity-40 mb-4">
+        <div className="opacity-40 mb-4 flex justify-center">
           <Logo />
         </div>
         <p className="font-sans text-xs text-rich-black/40">

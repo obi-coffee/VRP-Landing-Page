@@ -2,7 +2,7 @@ import ScrollReveal from './ScrollReveal'
 
 export default function ClosingCTA() {
   return (
-    <section className="py-24 md:py-32 px-6">
+    <section className="pt-12 pb-24 md:pt-16 md:pb-32 px-6">
       <div className="max-w-3xl mx-auto text-center">
         <ScrollReveal>
           <h2 className="font-sans font-bold text-[clamp(1.75rem,4.5vw,3.5rem)] leading-snug mb-4">
@@ -13,7 +13,7 @@ export default function ClosingCTA() {
           </p>
           <a
             href="#apply"
-            className="inline-block bg-tast-pink text-white font-mono text-xs uppercase tracking-wider px-10 py-4 hover:bg-tast-red transition-colors duration-200"
+            className="inline-block bg-tast-pink text-white font-mono text-xs uppercase tracking-wider px-10 py-4 rounded-full hover:bg-tast-red transition-colors duration-200"
           >
             Apply Now
           </a>
