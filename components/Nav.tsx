@@ -31,12 +31,20 @@ export default function Nav() {
         <a href="#" aria-label="tāst Coffee home">
           <Logo variant="ivory" />
         </a>
-        <a
-          href="#apply"
-          className="font-mono text-xs uppercase tracking-wider text-white border border-white/30 px-5 py-2 rounded-full hover:border-tast-pink hover:text-tast-pink transition-colors duration-200"
-        >
-          Apply
-        </a>
+        <div className="flex items-center gap-3">
+          <a
+            href="#beta"
+            className="font-mono text-xs uppercase tracking-wider text-white border border-white/30 px-5 py-2 rounded-full hover:border-tast-pink hover:text-tast-pink transition-colors duration-200"
+          >
+            Join Beta
+          </a>
+          <a
+            href="#apply"
+            className="font-mono text-xs uppercase tracking-wider text-white bg-tast-pink px-5 py-2 rounded-full hover:bg-tast-red transition-colors duration-200"
+          >
+            Apply
+          </a>
+        </div>
       </div>
     </nav>
   )
