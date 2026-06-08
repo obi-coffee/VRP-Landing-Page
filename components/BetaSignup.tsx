@@ -14,13 +14,17 @@ export default function BetaSignup() {
 
     const form = e.currentTarget
     const formData = new FormData(form)
-    const email = formData.get('email') as string
+    const data = {
+      firstName: formData.get('firstName') as string,
+      lastName: formData.get('lastName') as string,
+      email: formData.get('email') as string,
+    }
 
     try {
       const res = await fetch('/api/beta-signup', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify(data),
       })
 
       if (!res.ok) throw new Error('Submission failed')
@@ -56,6 +60,24 @@ export default function BetaSignup() {
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="max-w-md mx-auto" noValidate>
+            <div className="grid grid-cols-2 gap-3 mb-3">
+              <input
+                name="firstName"
+                type="text"
+                required
+                placeholder="First name"
+                className="bg-white/10 border border-white/20 rounded-full px-5 py-3 font-sans text-base text-white placeholder:text-white/30 focus:border-tast-pink focus:outline-none transition-colors"
+                aria-label="First name"
+              />
+              <input
+                name="lastName"
+                type="text"
+                required
+                placeholder="Last name"
+                className="bg-white/10 border border-white/20 rounded-full px-5 py-3 font-sans text-base text-white placeholder:text-white/30 focus:border-tast-pink focus:outline-none transition-colors"
+                aria-label="Last name"
+              />
+            </div>
             <div className="flex gap-3">
               <input
                 name="email"
