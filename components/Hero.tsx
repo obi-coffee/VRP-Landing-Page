@@ -13,6 +13,15 @@ const ROASTERS = [
   { name: 'Apiary Coffee Roasters', city: 'Washington', state: 'DC' },
   { name: 'Portrait Coffee', city: 'Atlanta', state: 'GA' },
   { name: 'Goodboybob', city: 'California', state: '' },
+  { name: 'Kid Dream Coffee', city: 'Beverly', state: 'MA' },
+  { name: 'Heady Cup Coffee Roasters', city: 'McHenry', state: 'IL' },
+  { name: 'Topeca Coffee Roasters', city: 'Tulsa', state: 'OK' },
+  { name: 'Cirque Coffee Roasters', city: 'Tulsa', state: 'OK' },
+  { name: 'Goshen Coffee', city: 'St. Louis', state: 'MO' },
+  { name: 'Quills Coffee', city: 'Louisville', state: 'KY' },
+  { name: "PT's Coffee", city: 'Topeka', state: 'KS' },
+  { name: 'Airship Coffee', city: 'Bentonville', state: 'AR' },
+  { name: 'Greater Goods Coffee Roasters', city: 'Austin', state: 'TX' },
 ]
 
 function TickerContent() {
