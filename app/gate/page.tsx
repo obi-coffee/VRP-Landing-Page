@@ -102,7 +102,7 @@ export default function Gate() {
         </div>
 
         {/* Stacked layers so the form and the message crossfade in place */}
-        <div className="relative w-full max-w-sm min-h-[260px]">
+        <div className="relative w-full max-w-lg min-h-[260px]">
           {/* The ask */}
           <div
             className={`absolute inset-0 flex flex-col items-center text-center transition-all duration-500 ease-in-out ${
@@ -111,11 +111,11 @@ export default function Gate() {
                 : 'opacity-0 -translate-y-3 pointer-events-none'
             }`}
           >
-            <p className="font-editorial italic text-white/80 text-2xl mb-10">
+            <p className="font-editorial italic text-white/80 text-[clamp(1rem,4.5vw,1.5rem)] whitespace-nowrap max-[340px]:whitespace-normal mb-10">
               Good morning. What&apos;s the magic word(s)?
             </p>
 
-            <form onSubmit={handleSubmit} noValidate className="w-full">
+            <form onSubmit={handleSubmit} noValidate className="w-full max-w-sm mx-auto">
               <label htmlFor="password" className="sr-only">
                 Password
               </label>
