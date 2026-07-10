@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect, useState, type FormEvent } from 'react'
-import { useRouter } from 'next/navigation'
 import Logo from '@/components/Logo'
 import { HERO_VIDEO_URL } from '@/lib/constants'
 
@@ -13,7 +12,6 @@ const POSTER =
   "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9'%3E%3Crect width='100%25' height='100%25' fill='%231A1A1A'/%3E%3C/svg%3E"
 
 export default function Gate() {
-  const router = useRouter()
   const [phase, setPhase] = useState<Phase>('idle')
   const [mounted, setMounted] = useState(false)
 
@@ -22,11 +20,6 @@ export default function Gate() {
     const t = requestAnimationFrame(() => setMounted(true))
     return () => cancelAnimationFrame(t)
   }, [])
-
-  // Warm the homepage while the visitor types
-  useEffect(() => {
-    router.prefetch('/')
-  }, [router])
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()
@@ -46,13 +39,15 @@ export default function Gate() {
         return
       }
 
-      // form fades out → message eases in → whole screen fades → enter site
+      // form fades out → message eases in → whole screen fades → enter site.
+      // Hard navigation (not router.push) so the middleware re-checks the
+      // fresh cookie — the client router may have cached the pre-auth
+      // redirect for '/'.
       setPhase('fadeout')
       setTimeout(() => setPhase('granted'), 400)
       setTimeout(() => setPhase('leaving'), 2100)
       setTimeout(() => {
-        router.push('/')
-        router.refresh()
+        window.location.assign('/')
       }, 2800)
     } catch {
       setPhase('wrong')
