@@ -8,14 +8,18 @@ export default function ClosingCTA() {
           <h2 className="font-sans font-bold text-[clamp(1.75rem,4.5vw,3.5rem)] leading-snug mb-4">
             Great Coffee Gets Lost.
           </h2>
-          <p className="font-editorial italic text-[clamp(1.75rem,4.5vw,3.5rem)] text-tast-pink leading-snug mb-12">
+          <p className="font-editorial italic text-[clamp(1.75rem,4.5vw,3.5rem)] text-tast-pink leading-snug mb-8">
             we built the fix.
+          </p>
+          <p className="font-serif text-lg text-rich-black/60 mb-10">
+            Sent here by a roaster you trust? That&apos;s exactly how this is
+            supposed to work.
           </p>
           <a
             href="#apply"
             className="inline-block bg-tast-pink text-white font-mono text-xs uppercase tracking-wider px-10 py-4 rounded-full hover:bg-tast-red transition-colors duration-200"
           >
-            Apply Now
+            Start the Conversation
           </a>
         </ScrollReveal>
       </div>

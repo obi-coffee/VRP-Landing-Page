@@ -3,19 +3,19 @@ import ScrollReveal from './ScrollReveal'
 const props = [
   {
     title: 'Qualified Discovery',
-    body: 'Users who find you on tāst already have taste profiles that match your coffee. These aren\u2019t random browsers \u2014 they\u2019re predisposed to love what you roast.',
-  },
-  {
-    title: 'Your Storefront',
-    body: 'A beautiful roaster profile with your story, sourcing philosophy, and full product line. Something you control and own.',
+    body: 'People find you on tāst because their taste profile matches your coffee — not because you outbid someone. “You said you liked that washed Rwanda — have you tried the one this roaster just released?” No pay to play. Ever. The only algorithm is taste.',
   },
   {
     title: 'Consumer Intelligence',
-    body: 'See how your coffees perform. Which flavor profiles resonate. What equipment your customers use. Insights you can\u2019t get anywhere else.',
+    body: 'Which coffees resonate, with whom, in which cities, brewed on what. What your customers buy when they aren’t buying yours. Even which cafés around the country are pouring your coffee. The consumer data specialty coffee has never had — shared back with the people who make it.',
   },
   {
-    title: '80\u201390% of Every Sale',
-    body: 'Stays with you. Compare that to 40\u201360% through traditional wholesale channels.',
+    title: 'Your Storefront',
+    body: 'A rich Verified Roaster Page you own and control — your story, your sourcing, your full line, your reviews. For the smallest roasters, it can replace a website entirely. For everyone else, it’s a second front door that never closes.',
+  },
+  {
+    title: 'Keep 85¢ of Every Dollar',
+    body: 'In year one, 85% of every marketplace sale stays with you — paid direct through your own Shopify, no invoices, no bill-backs. Typical marketplaces take 35–60%. We never need to, and we’ll show you why below.',
   },
 ]
 

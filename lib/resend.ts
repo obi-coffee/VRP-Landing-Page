@@ -14,6 +14,7 @@ export async function sendNotificationEmail(data: Record<string, string>) {
     ['Instagram', data.instagram ? `@${data.instagram}` : ''],
     ['Year Founded', data.yearFounded],
     ['How they heard about tāst', data.hearAbout],
+    ['Referred by (roaster)', data.referredBy],
     ['What interests them most', data.interest],
     ['Additional notes', data.notes],
   ]

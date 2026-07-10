@@ -29,13 +29,14 @@ export async function appendToSheet(data: Record<string, string>) {
     data.instagram || '',
     data.yearFounded || '',
     data.hearAbout || '',
+    data.referredBy || '',
     data.interest || '',
     data.notes || '',
   ]
 
   await sheets.spreadsheets.values.append({
     spreadsheetId,
-    range: 'Sheet1!A:L',
+    range: 'Sheet1!A:M',
     valueInputOption: 'USER_ENTERED',
     requestBody: { values: [row] },
   })

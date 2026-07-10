@@ -4,7 +4,10 @@ import { useState, type FormEvent } from 'react'
 
 type FormState = 'idle' | 'submitting' | 'success' | 'error'
 
+const REFERRED = 'Referred by another roaster'
+
 const hearAboutOptions = [
+  REFERRED,
   'Instagram',
   'Word of mouth',
   'Trade show / event',
@@ -72,11 +75,13 @@ function SelectField({
   name,
   options,
   required = false,
+  onChange,
 }: {
   label: string
   name: string
   options: string[]
   required?: boolean
+  onChange?: (value: string) => void
 }) {
   return (
     <div>
@@ -91,6 +96,7 @@ function SelectField({
         id={name}
         name={name}
         required={required}
+        onChange={onChange ? (e) => onChange(e.target.value) : undefined}
         className="w-full bg-transparent border-b border-rich-black/20 py-2 font-sans text-base text-rich-black focus:border-tast-pink focus:outline-none transition-colors appearance-none cursor-pointer"
         defaultValue=""
         aria-required={required}
@@ -110,6 +116,7 @@ function SelectField({
 
 export default function ApplicationForm() {
   const [state, setState] = useState<FormState>('idle')
+  const [wasReferred, setWasReferred] = useState(false)
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()
@@ -216,7 +223,6 @@ export default function ApplicationForm() {
               <InputField
                 label="Instagram Handle"
                 name="instagram"
-                required
                 prefix="@"
               />
               <InputField
@@ -238,12 +244,20 @@ export default function ApplicationForm() {
                 label="How did you hear about tāst?"
                 name="hearAbout"
                 options={hearAboutOptions}
+                onChange={(v) => setWasReferred(v === REFERRED)}
               />
               <SelectField
                 label="What interests you most?"
                 name="interest"
                 options={interestOptions}
               />
+              {wasReferred && (
+                <InputField
+                  label="Which roaster sent you? (They get 6 months of fees waived)"
+                  name="referredBy"
+                  placeholder="Roastery name"
+                />
+              )}
             </div>
             <div className="mt-6">
               <label
@@ -277,14 +291,19 @@ export default function ApplicationForm() {
             </div>
           )}
 
-          <div className="flex justify-center">
+          <div className="flex flex-col items-center">
             <button
               type="submit"
               disabled={state === 'submitting'}
               className="bg-tast-pink text-white font-mono text-xs uppercase tracking-wider px-12 py-4 rounded-full hover:bg-tast-red transition-colors duration-200 disabled:opacity-60 disabled:cursor-not-allowed"
             >
-              {state === 'submitting' ? 'Submitting...' : 'Submit Application'}
+              {state === 'submitting' ? 'Sending...' : 'Start the Conversation'}
             </button>
+            <p className="font-sans text-sm text-rich-black/50 text-center mt-6 max-w-md">
+              Takes two minutes. We read every application &mdash; you&apos;ll
+              hear from us within 48 hours with the full deck, the two-page
+              agreement, and a link to book a 30-minute walkthrough with Obi.
+            </p>
           </div>
         </form>
       </div>

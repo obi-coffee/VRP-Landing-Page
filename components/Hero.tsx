@@ -72,6 +72,9 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 px-6 pt-24 pb-16 flex flex-col items-center flex-1 w-full">
         <ScrollReveal className="text-center max-w-4xl mx-auto my-auto">
+          <p className="font-mono text-[0.65rem] md:text-xs uppercase tracking-[0.25em] text-white/60 mb-6">
+            For Roasters &mdash; The Founding Partner Program
+          </p>
           <h1 className="mb-8">
             <span className="block font-sans font-bold uppercase text-white text-[clamp(2.5rem,8vw,6rem)] leading-[0.95] tracking-tight">
               The Platform
@@ -93,16 +96,37 @@ export default function Hero() {
               discover, remember, and share the great coffee already out there.
               Your coffee.
             </p>
+            <p className="font-sans text-base leading-relaxed text-white/70 mt-4">
+              tāst puts your roasts in front of people whose taste already
+              matches them &mdash; and every order lands in your Shopify like
+              any other.
+            </p>
           </div>
 
-          <div className="mt-12">
+          <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-6">
             <a
               href="#apply"
               className="inline-block font-editorial italic text-lg text-white border-b border-white/40 pb-1 hover:border-tast-pink hover:text-tast-pink transition-colors duration-200"
             >
               Become a Founding Roaster Partner
             </a>
+            <a
+              href="#how-it-works"
+              className="inline-block font-mono text-xs uppercase tracking-wider text-white/60 hover:text-tast-pink transition-colors duration-200"
+            >
+              See how it works &darr;
+            </a>
           </div>
+
+          <p className="mt-10 font-mono text-[0.65rem] md:text-xs uppercase tracking-wider text-white/50 leading-relaxed">
+            $0 platform fees for 12 months
+            <span className="text-tast-pink mx-2" aria-hidden="true">&bull;</span>
+            15% commission, locked
+            <span className="text-tast-pink mx-2" aria-hidden="true">&bull;</span>
+            2-page agreement
+            <span className="text-tast-pink mx-2" aria-hidden="true">&bull;</span>
+            Your store, your orders, your money
+          </p>
         </ScrollReveal>
 
         <div className="scroll-indicator mt-auto pt-12">
@@ -122,8 +146,13 @@ export default function Hero() {
       </div>
 
       {/* Roaster ticker */}
-      <div className="relative z-10 bg-rich-black/60 backdrop-blur-sm border-t border-white/10 py-3 overflow-hidden">
-        <div className="ticker-track" aria-label="Verified Roaster Partners">
+      <div className="relative z-10 bg-rich-black/60 backdrop-blur-sm border-t border-white/10 overflow-hidden">
+        <p className="text-center font-mono text-[0.65rem] uppercase tracking-wider text-white/60 pt-3 px-6">
+          <span className="text-tast-pink font-bold">{ROASTERS.length} of 51</span>{' '}
+          founding seats claimed. When they&apos;re gone, the founding terms go
+          with them.
+        </p>
+        <div className="ticker-track py-3" aria-label="Verified Roaster Partners">
           <TickerContent />
           <TickerContent />
         </div>
