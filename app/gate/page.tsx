@@ -3,8 +3,13 @@
 import { useState, type FormEvent } from 'react'
 import { useRouter } from 'next/navigation'
 import Logo from '@/components/Logo'
+import { HERO_VIDEO_URL } from '@/lib/constants'
 
 type GateState = 'idle' | 'checking' | 'wrong' | 'granted'
+
+// 16:9 dark rich-black placeholder shown until the video paints its first frame
+const POSTER =
+  "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9'%3E%3Crect width='100%25' height='100%25' fill='%231A1A1A'/%3E%3C/svg%3E"
 
 export default function Gate() {
   const router = useRouter()
@@ -39,21 +44,41 @@ export default function Gate() {
   }
 
   return (
-    <main className="min-h-screen bg-rich-black flex flex-col items-center justify-center px-6">
-      <div className="mb-12">
+    <main className="relative min-h-screen flex flex-col items-center justify-center px-6 overflow-hidden">
+      {/* Rich-black fallback — lowest layer, matches the poster */}
+      <div className="absolute inset-0 z-0 bg-rich-black" aria-hidden="true" />
+
+      {/* Background video — above fallback */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+        poster={POSTER}
+        className="absolute inset-0 z-[1] w-full h-full object-cover"
+        aria-hidden="true"
+      >
+        <source src={HERO_VIDEO_URL} type="video/mp4" />
+      </video>
+
+      {/* Dark overlay — above video, below content */}
+      <div className="absolute inset-0 z-[2] bg-rich-black/40" aria-hidden="true" />
+
+      <div className="relative z-10 mb-12">
         <Logo variant="ivory" />
       </div>
 
       {state === 'granted' ? (
-        <div className="text-center" role="status" aria-live="polite">
+        <div className="relative z-10 text-center" role="status" aria-live="polite">
           <p className="font-handwritten text-tast-pink text-[clamp(3rem,10vw,6rem)] leading-none">
             yes you can!
           </p>
         </div>
       ) : (
-        <div className="w-full max-w-sm text-center">
+        <div className="relative z-10 w-full max-w-sm text-center">
           <p className="font-editorial italic text-white/80 text-2xl mb-10">
-            Can I kick it?
+            Good morning. What&apos;s the magic word(s)?
           </p>
 
           <form onSubmit={handleSubmit} noValidate>
