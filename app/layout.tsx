@@ -20,16 +20,12 @@ const spaceMono = localFont({
   display: 'swap',
 })
 
-const caveat = localFont({
+// Manic — the brand's actual handwritten face (display moments only)
+const manic = localFont({
   src: [
     {
-      path: '../public/fonts/caveat-latin-400-normal.woff2',
+      path: '../public/fonts/manic-400-normal.woff2',
       weight: '400',
-      style: 'normal',
-    },
-    {
-      path: '../public/fonts/caveat-latin-700-normal.woff2',
-      weight: '700',
       style: 'normal',
     },
   ],
@@ -58,7 +54,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${spaceMono.variable} ${caveat.variable}`}
+      className={`${spaceMono.variable} ${manic.variable}`}
     >
       <head>
         <link
