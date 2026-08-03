@@ -13,7 +13,8 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  // Everything except the gate itself, its API, Next internals,
-  // and static files (anything with a file extension).
-  matcher: ['/((?!gate|api/gate|_next/static|_next/image|favicon.ico|.*\\..*).*)'],
+  // Everything except the gate itself, its API, the public privacy policy
+  // (Shopify App Store reviewers must reach it without the gate),
+  // Next internals, and static files (anything with a file extension).
+  matcher: ['/((?!gate|api/gate|privacy|_next/static|_next/image|favicon.ico|.*\\..*).*)'],
 }

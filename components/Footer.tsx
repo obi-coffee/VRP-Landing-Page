@@ -60,6 +60,14 @@ export default function Footer() {
                   hello@tastcoffee.co
                 </a>
               </li>
+              <li>
+                <a
+                  href="/privacy"
+                  className="text-rich-black/70 hover:text-tast-pink transition-colors"
+                >
+                  Privacy Policy
+                </a>
+              </li>
             </ul>
           </div>
         </div>
