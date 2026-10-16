@@ -24,10 +24,10 @@ export default function TermsPage() {
           <div className="space-y-4 font-serif text-base leading-relaxed text-rich-black/80">
             <p>
               <strong className="font-sans text-sm text-rich-black/50">Effective Date:</strong>{' '}
-              <span className="text-rich-black/50">[DATE]</span>
+              October 1, 2026
               <br />
               <strong className="font-sans text-sm text-rich-black/50">Last Updated:</strong>{' '}
-              <span className="text-rich-black/50">[DATE]</span>
+              October 16, 2026
             </p>
 
             <p>
