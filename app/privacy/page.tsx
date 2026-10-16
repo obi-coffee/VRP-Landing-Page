@@ -1,195 +1,340 @@
-import type { Metadata } from 'next'
-import Logo from '@/components/Logo'
+import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
+import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy — tāst Coffee Marketplace Plugin',
-  description:
-    'How In Great Taste LLC collects, uses, and protects data when roasters connect their Shopify store to the tāst marketplace.',
+  title: 'Privacy Policy — tāst Coffee',
+  description: 'How tāst Coffee collects, uses and protects your information.',
 }
 
-const SECTION_HEADING =
-  'font-sans font-semibold text-xl tracking-tight mt-12 mb-4 pt-6 border-t border-rich-black/10'
-const BODY = 'font-serif text-[17px] leading-relaxed text-rich-black/90 mb-4'
-const LIST = 'font-serif text-[17px] leading-relaxed text-rich-black/90 mb-4 ml-5 list-disc space-y-2'
-
-export default function PrivacyPolicy() {
+export default function PrivacyPage() {
   return (
     <>
-      <main id="main-content" className="bg-london-fog min-h-screen">
-        <div className="max-w-3xl mx-auto px-6 pt-16 pb-24">
-          <a href="/" aria-label="tāst Coffee home" className="inline-block mb-10">
-            <Logo />
-          </a>
-
-          <h1 className="font-sans font-bold text-3xl md:text-4xl tracking-tight mb-3">
-            Privacy Policy — tāst Coffee Marketplace Plugin
+      <Nav />
+      <main id="main-content" className="pt-32 pb-24 px-6">
+        <article className="max-w-3xl mx-auto prose-terms">
+          <h1 className="font-sans font-bold text-[clamp(2rem,5vw,3.5rem)] leading-tight mb-2">
+            Privacy Policy
           </h1>
-          <p className="font-mono text-xs uppercase tracking-widest text-raspberry-barete mb-10">
-            Effective August 3, 2026 · In Great Taste LLC
+          <p className="font-mono text-xs uppercase tracking-widest text-rich-black/40 mb-12">
+            Last Updated: October 2026
           </p>
 
-          <p className={BODY}>
-            This policy explains how In Great Taste LLC (&ldquo;tāst,&rdquo; &ldquo;we,&rdquo;
-            &ldquo;us&rdquo;) collects, uses, and protects data when you install and use the tāst
-            Coffee Marketplace Plugin (the &ldquo;Plugin&rdquo;) on your Shopify store. The Plugin
-            connects your store to the tāst marketplace so your catalog, inventory, and orders stay
-            in sync between the two. We wrote this the way we&rsquo;d want it written for us:
-            plainly. If anything here is unclear, write to us at{' '}
-            <a href="mailto:hello@tastcoffee.com" className="text-tast-pink hover:text-tast-red transition-colors">
-              hello@tastcoffee.com
-            </a>{' '}
-            and a person will answer.
-          </p>
+          <div className="space-y-4 font-serif text-base leading-relaxed text-rich-black/80">
+            <p>
+              This Privacy Policy explains how In Great Taste LLC
+              (&ldquo;tāst,&rdquo; &ldquo;we,&rdquo; &ldquo;us,&rdquo;
+              &ldquo;our&rdquo;) collects, uses, shares and protects information
+              when you use the tāst website at tastcoffee.com, the tāst mobile
+              application, the tāst Roaster sales channel for Shopify, and any
+              related services (collectively, the &ldquo;Services&rdquo;).
+            </p>
+            <p>
+              By using our Services you agree to the collection and use of
+              information as described in this policy. If you do not agree,
+              please do not use the Services.
+            </p>
+          </div>
 
-          <h2 className={SECTION_HEADING}>Who this policy covers</h2>
-          <p className={BODY}>
-            This policy applies to merchants — Verified Roaster Partners who install the Plugin —
-            and to the personal information of their customers that passes through the Plugin as
-            part of order fulfillment. It covers the Plugin specifically. The tāst consumer
-            platform and the tastcoffee.com store have their own privacy policies.
-          </p>
+          <Section number={1} title="Information we collect">
+            <p>
+              <strong>Information you provide directly.</strong>
+            </p>
+            <ul>
+              <li>
+                <strong>Roaster Partner applications:</strong> roastery name,
+                contact name, email address, phone number, business location,
+                website URL, Instagram handle, year founded, how you heard about
+                tāst, areas of interest and any additional notes you include.
+              </li>
+              <li>
+                <strong>Beta sign-ups:</strong> first name, last name and email
+                address.
+              </li>
+              <li>
+                <strong>General inquiries:</strong> any information you include
+                when you email us.
+              </li>
+              <li>
+                <strong>App account:</strong> when you create a tāst account, we
+                collect your name, email address and any profile information you
+                choose to add, such as taste preferences and saved coffees.
+              </li>
+            </ul>
 
-          <h2 className={SECTION_HEADING}>What we collect through Shopify&rsquo;s APIs</h2>
-          <p className={BODY}>
-            When you install the Plugin, we access only what the integration needs to work:
-          </p>
-          <ul className={LIST}>
-            <li>
-              <strong>Store information.</strong> Your store name, myshopify domain, store contact
-              email, currency, and timezone — used to link your Shopify store to your Verified
-              Roaster Partner account.
-            </li>
-            <li>
-              <strong>Product and catalog data.</strong> Product titles, descriptions, images,
-              variants, prices, and tags — used to publish and keep your tāst storefront current.
-            </li>
-            <li>
-              <strong>Inventory data.</strong> Stock levels for synced products — used to keep
-              availability accurate in both directions, so a bag that sells out in one place shows
-              sold out in the other.
-            </li>
-            <li>
-              <strong>Order data.</strong> For orders placed on the tāst marketplace, we create
-              orders in your Shopify admin. These include the customer&rsquo;s name, shipping
-              address, email address, and the items purchased — the information you need to fulfill
-              the order. We also read the fulfillment status of those orders so buyers on tāst can
-              see shipping updates.
-            </li>
-            <li>
-              <strong>Usage logs.</strong> Basic technical logs of the Plugin&rsquo;s activity
-              (sync events, errors, timestamps) — used for support and to keep the integration
-              reliable.
-            </li>
-          </ul>
-          <p className={BODY}>
-            We do not access your store&rsquo;s full customer list, your customers&rsquo; payment
-            card details, or data from orders that did not originate on tāst.
-          </p>
+            <p>
+              <strong>Information collected automatically.</strong>
+            </p>
+            <ul>
+              <li>
+                <strong>Usage data:</strong> pages visited, features used, search
+                queries, coffees viewed or saved, and interactions with roaster
+                profiles.
+              </li>
+              <li>
+                <strong>Device and browser data:</strong> IP address, browser
+                type and version, operating system, device type and screen size.
+              </li>
+              <li>
+                <strong>Cookies and similar technologies:</strong> we use cookies
+                and local storage to keep you signed in, remember your
+                preferences and understand how the Services are used. You can
+                control cookies through your browser settings, but some features
+                may not work correctly without them.
+              </li>
+            </ul>
 
-          <h2 className={SECTION_HEADING}>How we use this data</h2>
-          <p className={BODY}>
-            We use the data described above to operate the integration: publishing your catalog to
-            the tāst marketplace, syncing inventory, routing tāst orders to your Shopify admin, and
-            reflecting fulfillment status back to buyers. We also use aggregated marketplace
-            activity to produce the audience and taste-profile insights available to you as a
-            Verified Roaster Partner. We use technical logs to troubleshoot issues and improve the
-            Plugin.
-          </p>
-          <p className={BODY}>
-            We do not sell personal data. We do not use your store&rsquo;s data to advertise to you
-            or to anyone else, and we do not share your catalog or sales data with other roasters.
-          </p>
+            <p>
+              <strong>Information from third parties.</strong>
+            </p>
+            <ul>
+              <li>
+                <strong>Shopify:</strong> for Roaster Partners who install the
+                tāst sales channel, we receive product, inventory, location and
+                order data from Shopify as described in our{' '}
+                <a href="/terms" className="text-tast-pink hover:underline">
+                  Sales Channel Terms
+                </a>
+                .
+              </li>
+            </ul>
+          </Section>
 
-          <h2 className={SECTION_HEADING}>Who we share data with</h2>
-          <p className={BODY}>
-            We share data only where the service requires it: with the infrastructure providers
-            that host the tāst platform, with the tāst marketplace itself (so buyers can see your
-            products and their order status), and where the law requires disclosure. Every provider
-            we use is bound by contract to protect your data and use it only to provide services to
-            us.
-          </p>
+          <Section number={2} title="How we use your information">
+            <p>We use the information we collect to:</p>
+            <ul>
+              <li>
+                provide, operate and improve the Services, including coffee
+                discovery, recommendations and roaster profiles;
+              </li>
+              <li>
+                process and review Roaster Partner applications;
+              </li>
+              <li>
+                notify beta sign-ups when the app is ready for testing;
+              </li>
+              <li>
+                calculate and bill commissions on orders placed through the tāst
+                sales channel;
+              </li>
+              <li>
+                send transactional emails such as application confirmations,
+                order notifications and account updates;
+              </li>
+              <li>
+                send product updates and announcements you have opted into (you
+                can unsubscribe at any time);
+              </li>
+              <li>
+                monitor for fraud, abuse and violations of our terms;
+              </li>
+              <li>
+                comply with legal obligations.
+              </li>
+            </ul>
+            <p>
+              We do not sell your personal information. We do not use your data
+              to train machine-learning models.
+            </p>
+          </Section>
 
-          <h2 className={SECTION_HEADING}>Cookies and tracking</h2>
-          <p className={BODY}>
-            The Plugin does not add cookies, pixels, or tracking scripts to your customer-facing
-            storefront.
-          </p>
+          <Section number={3} title="How we share your information">
+            <p>
+              We share information only in the following circumstances:
+            </p>
+            <ul>
+              <li>
+                <strong>Service providers.</strong> We use third-party services
+                to help operate the Services, including Shopify (e-commerce
+                platform), Resend (transactional email), Google Workspace
+                (internal operations) and hosting providers. These providers
+                access your data only to perform services on our behalf and are
+                contractually required to protect it.
+              </li>
+              <li>
+                <strong>Roaster Partners.</strong> When you place an order
+                through tāst, the Roaster Partner who fulfils your order
+                receives your name, shipping address and email through Shopify
+                checkout, as they are the seller of record.
+              </li>
+              <li>
+                <strong>Legal requirements.</strong> We may disclose information
+                if required by law, regulation, legal process or governmental
+                request, or to protect the rights, property or safety of tāst,
+                our users or the public.
+              </li>
+              <li>
+                <strong>Business transfers.</strong> If tāst is involved in a
+                merger, acquisition or sale of assets, your information may be
+                transferred as part of that transaction. We will notify you
+                before your information becomes subject to a different privacy
+                policy.
+              </li>
+            </ul>
+          </Section>
 
-          <h2 className={SECTION_HEADING}>Where data lives</h2>
-          <p className={BODY}>
-            Data handled by the Plugin is stored and processed in the United States. If you operate
-            in the European Economic Area, the United Kingdom, or another region with data-transfer
-            requirements, transfers to the United States are protected by appropriate safeguards,
-            such as standard contractual clauses.
-          </p>
+          <Section number={4} title="Data retention">
+            <p>
+              We retain your information for as long as your account is active or
+              as needed to provide the Services. If you request deletion of your
+              account, we will delete your personal information within thirty
+              (30) days, except where we are required to retain it for legal,
+              accounting or fraud-prevention purposes.
+            </p>
+            <p>
+              For Roaster Partners who uninstall the tāst sales channel, we
+              delete Shopify store data within thirty (30) days as described in
+              our{' '}
+              <a href="/terms" className="text-tast-pink hover:underline">
+                Sales Channel Terms
+              </a>
+              .
+            </p>
+          </Section>
 
-          <h2 className={SECTION_HEADING}>How long we keep data</h2>
-          <p className={BODY}>
-            We keep your store, catalog, and order data for as long as the Plugin is installed and
-            your Verified Roaster Partner account is active. If you uninstall the Plugin, we delete
-            your store&rsquo;s data within 30 days of receiving Shopify&rsquo;s shop redaction
-            request, except where the law requires us to keep records longer (for example,
-            completed order records kept for tax and accounting purposes).
-          </p>
+          <Section number={5} title="Data security">
+            <p>
+              We use commercially reasonable technical and organizational
+              measures to protect your information, including encryption in
+              transit (TLS) and at rest, access controls and regular security
+              reviews. However, no method of transmission or storage is 100%
+              secure, and we cannot guarantee absolute security.
+            </p>
+          </Section>
 
-          <h2 className={SECTION_HEADING}>Your customers&rsquo; rights, and yours</h2>
-          <p className={BODY}>
-            The Plugin honors Shopify&rsquo;s mandatory privacy webhooks. When a customer asks you
-            for their data or asks to be forgotten, Shopify notifies us automatically and we
-            respond accordingly:
-          </p>
-          <ul className={LIST}>
-            <li>
-              <strong>Data requests</strong> — we provide the personal data we hold about a
-              customer so you can pass it on to them.
-            </li>
-            <li>
-              <strong>Customer redaction</strong> — we delete the personal data we hold about that
-              customer, subject to legal retention requirements.
-            </li>
-            <li>
-              <strong>Shop redaction</strong> — after you uninstall, we delete your store&rsquo;s
-              data as described above.
-            </li>
-          </ul>
-          <p className={BODY}>
-            Depending on where you or your customers live, you may have rights to access, correct,
-            delete, or restrict the processing of personal data. To exercise any of these rights,
-            or to ask us anything about this policy, email{' '}
-            <a href="mailto:hello@tastcoffee.com" className="text-tast-pink hover:text-tast-red transition-colors">
-              hello@tastcoffee.com
-            </a>
-            . We respond to verified requests within 30 days.
-          </p>
+          <Section number={6} title="Your rights and choices">
+            <p>
+              Depending on where you live, you may have the right to:
+            </p>
+            <ul>
+              <li>
+                access, correct or delete the personal information we hold about
+                you;
+              </li>
+              <li>
+                object to or restrict certain processing of your data;
+              </li>
+              <li>
+                withdraw consent where processing is based on consent;
+              </li>
+              <li>
+                request a portable copy of your data;
+              </li>
+              <li>
+                opt out of marketing communications at any time by clicking
+                &ldquo;unsubscribe&rdquo; in any email or by contacting us.
+              </li>
+            </ul>
+            <p>
+              To exercise any of these rights, email us at{' '}
+              <a
+                href="mailto:legal@tastcoffee.com"
+                className="text-tast-pink hover:underline"
+              >
+                legal@tastcoffee.com
+              </a>
+              . We will respond within thirty (30) days.
+            </p>
+          </Section>
 
-          <h2 className={SECTION_HEADING}>Security</h2>
-          <p className={BODY}>
-            Data moves between Shopify and tāst over encrypted connections, access to production
-            systems is limited to the people who need it, and API credentials are stored encrypted.
-            No system is perfectly secure, but if a breach ever affects your data, we will notify
-            you promptly and tell you plainly what happened and what we&rsquo;re doing about it.
-          </p>
+          <Section number={7} title="Children's privacy">
+            <p>
+              The Services are not directed to children under the age of 13. We
+              do not knowingly collect personal information from children under
+              13. If we learn that we have collected information from a child
+              under 13, we will delete it promptly. If you believe a child has
+              provided us with personal information, please contact us at{' '}
+              <a
+                href="mailto:legal@tastcoffee.com"
+                className="text-tast-pink hover:underline"
+              >
+                legal@tastcoffee.com
+              </a>
+              .
+            </p>
+          </Section>
 
-          <h2 className={SECTION_HEADING}>Changes to this policy</h2>
-          <p className={BODY}>
-            If we change this policy in a way that matters, we&rsquo;ll update the effective date
-            above and notify you by email before the change takes effect. We won&rsquo;t quietly
-            move the ground under you.
-          </p>
+          <Section number={8} title="California residents">
+            <p>
+              If you are a California resident, the California Consumer Privacy
+              Act (CCPA) provides you with additional rights, including the right
+              to know what personal information we collect and how we use it, the
+              right to request deletion, and the right not to be discriminated
+              against for exercising your rights. We do not sell personal
+              information as defined by the CCPA.
+            </p>
+            <p>
+              To submit a request, email{' '}
+              <a
+                href="mailto:legal@tastcoffee.com"
+                className="text-tast-pink hover:underline"
+              >
+                legal@tastcoffee.com
+              </a>{' '}
+              with the subject line &ldquo;CCPA Request.&rdquo;
+            </p>
+          </Section>
 
-          <h2 className={SECTION_HEADING}>Contact</h2>
-          <p className={BODY}>
-            In Great Taste LLC
-            <br />
-            Email:{' '}
-            <a href="mailto:hello@tastcoffee.com" className="text-tast-pink hover:text-tast-red transition-colors">
-              hello@tastcoffee.com
-            </a>
-          </p>
-        </div>
+          <Section number={9} title="Changes to this policy">
+            <p>
+              We may update this Privacy Policy from time to time. When we make
+              material changes, we will notify you by email or by posting a
+              notice on the Services at least thirty (30) days before the changes
+              take effect. Your continued use of the Services after the effective
+              date constitutes acceptance of the updated policy.
+            </p>
+          </Section>
+
+          <Section number={10} title="Contact us">
+            <p>
+              If you have questions about this Privacy Policy or how we handle
+              your data, contact us at:
+            </p>
+            <p>
+              In Great Taste LLC
+              <br />
+              <a
+                href="mailto:legal@tastcoffee.com"
+                className="text-tast-pink hover:underline"
+              >
+                legal@tastcoffee.com
+              </a>
+              {' · '}
+              <a
+                href="mailto:hello@tastcoffee.co"
+                className="text-tast-pink hover:underline"
+              >
+                hello@tastcoffee.co
+              </a>
+            </p>
+          </Section>
+        </article>
       </main>
       <Footer />
     </>
+  )
+}
+
+function Section({
+  number,
+  title,
+  children,
+}: {
+  number: number
+  title: string
+  children: React.ReactNode
+}) {
+  return (
+    <section className="mt-12">
+      <h2 className="font-sans font-bold text-xl mb-4">
+        <span className="font-mono text-xs text-rich-black/40 mr-2">
+          {number}.
+        </span>
+        {title}
+      </h2>
+      <div className="space-y-4 font-serif text-base leading-relaxed text-rich-black/80 [&_ul]:list-disc [&_ul]:pl-6 [&_ul]:space-y-1 [&_strong]:font-sans [&_strong]:text-rich-black [&_strong]:text-sm [&_em]:text-rich-black/60">
+        {children}
+      </div>
+    </section>
   )
 }
