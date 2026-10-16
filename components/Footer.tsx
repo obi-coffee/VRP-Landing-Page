@@ -19,7 +19,7 @@ export default function Footer() {
 
       {/* Links */}
       <div className="max-w-5xl mx-auto px-6 pb-16">
-        <div className="grid grid-cols-2 gap-8 max-w-md mx-auto text-center">
+        <div className="grid grid-cols-3 gap-8 max-w-lg mx-auto text-center">
           <div>
             <h4 className="font-mono text-xs uppercase tracking-widest text-rich-black/40 mb-4">
               Explore
@@ -43,6 +43,21 @@ export default function Footer() {
                   className="text-rich-black/70 hover:text-tast-pink transition-colors"
                 >
                   Instagram
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="font-mono text-xs uppercase tracking-widest text-rich-black/40 mb-4">
+              Legal
+            </h4>
+            <ul className="space-y-2 font-sans text-sm">
+              <li>
+                <a
+                  href="/terms"
+                  className="text-rich-black/70 hover:text-tast-pink transition-colors"
+                >
+                  Terms
                 </a>
               </li>
             </ul>
