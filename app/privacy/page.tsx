@@ -17,7 +17,7 @@ export default function PrivacyPage() {
             Privacy Policy
           </h1>
           <p className="font-mono text-xs uppercase tracking-widest text-rich-black/40 mb-12">
-            Last Updated: October 2026
+            Effective: October 1, 2026 · Last Updated: October 16, 2026
           </p>
 
           <div className="space-y-4 font-serif text-base leading-relaxed text-rich-black/80">
