@@ -60,6 +60,14 @@ export default function Footer() {
                   Terms
                 </a>
               </li>
+              <li>
+                <a
+                  href="/privacy"
+                  className="text-rich-black/70 hover:text-tast-pink transition-colors"
+                >
+                  Privacy
+                </a>
+              </li>
             </ul>
           </div>
           <div>

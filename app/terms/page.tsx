@@ -39,9 +39,7 @@ export default function TermsPage() {
               &ldquo;Roaster&rdquo;). By installing or using the Channel you agree to
               these terms and to our{' '}
               <a
-                href="https://admin.tastcoffeeapp.com/privacy"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/privacy"
                 className="text-tast-pink hover:underline"
               >
                 Privacy Policy
