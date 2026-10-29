@@ -54,9 +54,15 @@ export default function BetaSignup() {
             <p className="font-editorial italic text-xl text-tast-pink mb-2">
               You&apos;re on the list.
             </p>
-            <p className="font-sans text-sm text-white/50">
+            <p className="font-sans text-sm text-white/50 mb-4">
               We&apos;ll be in touch soon.
             </p>
+            <a
+              href="/waitlist"
+              className="inline-block font-mono text-xs uppercase tracking-wider text-tast-pink border-b border-tast-pink/30 pb-1 hover:border-tast-pink transition-colors"
+            >
+              See what&apos;s next
+            </a>
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="max-w-md mx-auto" noValidate>
