@@ -34,13 +34,13 @@ const manic = localFont({
 })
 
 export const metadata: Metadata = {
-  title: 'Become a Verified Roaster Partner — tāst Coffee',
+  title: 'tāst Coffee — Discover Coffee You\'ll Love',
   description:
-    'tāst is building the definitive platform for specialty coffee discovery. Apply to become a founding roaster partner.',
+    'tāst is the platform specialty coffee deserves — connecting roasters with the people who drink it. Join the beta or become a roaster partner.',
   openGraph: {
-    title: 'Become a Verified Roaster Partner — tāst Coffee',
+    title: 'tāst Coffee — Discover Coffee You\'ll Love',
     description:
-      'tāst is building the definitive platform for specialty coffee discovery. Apply to become a founding roaster partner.',
+      'tāst is the platform specialty coffee deserves — connecting roasters with the people who drink it. Join the beta or become a roaster partner.',
     type: 'website',
     siteName: 'tāst Coffee',
   },
