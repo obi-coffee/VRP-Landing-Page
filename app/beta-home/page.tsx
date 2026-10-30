@@ -1,5 +1,6 @@
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
+import VideoHero from '@/components/VideoHero'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -61,20 +62,22 @@ export default function BetaHomePage() {
       <Nav />
       <main id="main-content">
         {/* Hero */}
-        <section className="bg-rich-black pt-32 pb-20 px-6 text-center">
-          <div className="max-w-3xl mx-auto">
-            <p className="font-mono text-xs uppercase tracking-widest text-tast-pink mb-4">
-              Beta Tester Home
-            </p>
-            <h1 className="font-sans font-bold text-[clamp(2rem,5vw,4rem)] leading-tight text-white mb-6">
-              Welcome to the tāst test.
-            </h1>
-            <p className="font-serif text-lg text-white/60 leading-relaxed max-w-xl mx-auto">
-              Here&apos;s everything you need for the journey ahead.
-              Thanks for your time and your honesty.
-            </p>
+        <VideoHero videoSrc="/videos/beta-home.mp4">
+          <div className="pt-32 pb-20 px-6 text-center">
+            <div className="max-w-3xl mx-auto">
+              <p className="font-mono text-xs uppercase tracking-widest text-tast-pink mb-4">
+                Beta Tester Home
+              </p>
+              <h1 className="font-sans font-bold text-[clamp(2rem,5vw,4rem)] leading-tight text-white mb-6">
+                Welcome to the tāst test.
+              </h1>
+              <p className="font-serif text-lg text-white/60 leading-relaxed max-w-xl mx-auto">
+                Here&apos;s everything you need for the journey ahead.
+                Thanks for your time and your honesty.
+              </p>
+            </div>
           </div>
-        </section>
+        </VideoHero>
 
         {/* Get the App */}
         <section className="py-20 px-6 bg-london-fog">

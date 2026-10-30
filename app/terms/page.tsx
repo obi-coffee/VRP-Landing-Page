@@ -1,5 +1,6 @@
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
+import VideoHero from '@/components/VideoHero'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -12,14 +13,20 @@ export default function TermsPage() {
   return (
     <>
       <Nav />
-      <main id="main-content" className="pt-32 pb-24 px-6">
-        <article className="max-w-3xl mx-auto prose-terms">
-          <h1 className="font-sans font-bold text-[clamp(2rem,5vw,3.5rem)] leading-tight mb-2">
-            Sales Channel Terms
-          </h1>
-          <p className="font-mono text-xs uppercase tracking-widest text-rich-black/40 mb-12">
-            For Shopify Merchants
-          </p>
+      <main id="main-content">
+        <VideoHero videoSrc="/videos/terms.mp4">
+          <div className="pt-32 pb-16 px-6 text-center">
+            <div className="max-w-3xl mx-auto">
+              <h1 className="font-sans font-bold text-[clamp(2rem,5vw,3.5rem)] leading-tight text-white mb-2">
+                Sales Channel Terms
+              </h1>
+              <p className="font-mono text-xs uppercase tracking-widest text-white/50">
+                For Shopify Merchants
+              </p>
+            </div>
+          </div>
+        </VideoHero>
+        <article className="max-w-3xl mx-auto prose-terms pt-12 pb-24 px-6">
 
           <div className="space-y-4 font-serif text-base leading-relaxed text-rich-black/80">
             <p>
