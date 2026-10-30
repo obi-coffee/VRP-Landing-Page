@@ -2,6 +2,7 @@ import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import BetaSignup from '@/components/BetaSignup'
 import ScrollReveal from '@/components/ScrollReveal'
+import VideoHero from '@/components/VideoHero'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -16,24 +17,26 @@ export default function BetaPage() {
       <Nav />
       <main id="main-content">
         {/* Hero */}
-        <section className="bg-rich-black pt-32 pb-20 px-6 text-center">
-          <div className="max-w-3xl mx-auto">
-            <ScrollReveal>
-              <p className="font-mono text-xs uppercase tracking-widest text-tast-pink mb-4">
-                For Coffee Lovers
-              </p>
-              <h1 className="font-sans font-bold text-[clamp(2rem,5vw,4rem)] leading-tight text-white mb-6">
-                A better way to discover
-                <br className="hidden md:block" /> specialty coffee.
-              </h1>
-              <p className="font-serif text-lg text-white/60 leading-relaxed max-w-xl mx-auto">
-                tāst helps you find great coffee, remember what you loved, and
-                buy directly from the people who roast it. We&apos;re in beta
-                &mdash; and we want you in.
-              </p>
-            </ScrollReveal>
+        <VideoHero videoSrc="/videos/beta.mp4">
+          <div className="pt-32 pb-20 px-6 text-center">
+            <div className="max-w-3xl mx-auto">
+              <ScrollReveal>
+                <p className="font-mono text-xs uppercase tracking-widest text-tast-pink mb-4">
+                  For Coffee Lovers
+                </p>
+                <h1 className="font-sans font-bold text-[clamp(2rem,5vw,4rem)] leading-tight text-white mb-6">
+                  A better way to discover
+                  <br className="hidden md:block" /> specialty coffee.
+                </h1>
+                <p className="font-serif text-lg text-white/60 leading-relaxed max-w-xl mx-auto">
+                  tāst helps you find great coffee, remember what you loved, and
+                  buy directly from the people who roast it. We&apos;re in beta
+                  &mdash; and we want you in.
+                </p>
+              </ScrollReveal>
+            </div>
           </div>
-        </section>
+        </VideoHero>
 
         {/* What You Can Do */}
         <section className="py-20 px-6">

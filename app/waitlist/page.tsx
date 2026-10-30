@@ -1,5 +1,6 @@
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
+import VideoHero from '@/components/VideoHero'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -14,20 +15,22 @@ export default function WaitlistPage() {
       <Nav />
       <main id="main-content">
         {/* Hero */}
-        <section className="bg-rich-black pt-32 pb-24 px-6 text-center">
-          <div className="max-w-3xl mx-auto">
-            <p className="font-mono text-xs uppercase tracking-widest text-tast-pink mb-4">
-              Waitlist Confirmed
-            </p>
-            <h1 className="font-sans font-bold text-[clamp(2rem,5vw,4rem)] leading-tight text-white mb-6">
-              You&apos;re on the list.
-            </h1>
-            <p className="font-serif text-lg text-white/60 leading-relaxed max-w-xl mx-auto">
-              You&apos;re probably here because you like coffee (or because you
-              know nothing about coffee, but you like learning).
-            </p>
+        <VideoHero videoSrc="/videos/waitlist.mp4">
+          <div className="pt-32 pb-24 px-6 text-center">
+            <div className="max-w-3xl mx-auto">
+              <p className="font-mono text-xs uppercase tracking-widest text-tast-pink mb-4">
+                Waitlist Confirmed
+              </p>
+              <h1 className="font-sans font-bold text-[clamp(2rem,5vw,4rem)] leading-tight text-white mb-6">
+                You&apos;re on the list.
+              </h1>
+              <p className="font-serif text-lg text-white/60 leading-relaxed max-w-xl mx-auto">
+                You&apos;re probably here because you like coffee (or because you
+                know nothing about coffee, but you like learning).
+              </p>
+            </div>
           </div>
-        </section>
+        </VideoHero>
 
         {/* What You're Waiting For */}
         <section className="py-20 px-6">
