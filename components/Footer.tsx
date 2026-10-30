@@ -19,12 +19,20 @@ export default function Footer() {
 
       {/* Links */}
       <div className="max-w-5xl mx-auto px-6 pb-16">
-        <div className="grid grid-cols-3 gap-8 max-w-lg mx-auto text-center">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-2xl mx-auto text-center">
           <div>
             <h4 className="font-mono text-xs uppercase tracking-widest text-rich-black/40 mb-4">
-              Explore
+              Roasters
             </h4>
             <ul className="space-y-2 font-sans text-sm">
+              <li>
+                <a
+                  href="/roasters"
+                  className="text-rich-black/70 hover:text-tast-pink transition-colors"
+                >
+                  Become a Partner
+                </a>
+              </li>
               <li>
                 <a
                   href="https://tastcoffee.com"
@@ -35,14 +43,35 @@ export default function Footer() {
                   tastcoffee.com
                 </a>
               </li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="font-mono text-xs uppercase tracking-widest text-rich-black/40 mb-4">
+              Beta
+            </h4>
+            <ul className="space-y-2 font-sans text-sm">
               <li>
                 <a
-                  href="https://www.instagram.com/tastcoffeeco/"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="/beta"
                   className="text-rich-black/70 hover:text-tast-pink transition-colors"
                 >
-                  Instagram
+                  Join the Beta
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/beta-home"
+                  className="text-rich-black/70 hover:text-tast-pink transition-colors"
+                >
+                  Beta Home
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/waitlist"
+                  className="text-rich-black/70 hover:text-tast-pink transition-colors"
+                >
+                  Waitlist
                 </a>
               </li>
             </ul>
@@ -72,23 +101,25 @@ export default function Footer() {
           </div>
           <div>
             <h4 className="font-mono text-xs uppercase tracking-widest text-rich-black/40 mb-4">
-              Get Help
+              Connect
             </h4>
             <ul className="space-y-2 font-sans text-sm">
+              <li>
+                <a
+                  href="https://www.instagram.com/tastcoffeeco/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-rich-black/70 hover:text-tast-pink transition-colors"
+                >
+                  Instagram
+                </a>
+              </li>
               <li>
                 <a
                   href="mailto:hello@tastcoffee.co"
                   className="text-rich-black/70 hover:text-tast-pink transition-colors"
                 >
                   hello@tastcoffee.co
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/privacy"
-                  className="text-rich-black/70 hover:text-tast-pink transition-colors"
-                >
-                  Privacy Policy
                 </a>
               </li>
             </ul>
